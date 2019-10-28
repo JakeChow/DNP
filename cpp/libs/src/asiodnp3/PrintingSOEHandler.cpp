@@ -18,15 +18,72 @@
  * limitations under the License.
  */
 #include "asiodnp3/PrintingSOEHandler.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 using namespace opendnp3;
 
+void ClearLog(string log) {
+	std::ofstream l;
+	l.open(log, std::ios::out | std::ios::trunc);
+	l.close();
+}
+
+void BinaryLog(const HeaderInfo& info, const ICollection<Indexed<Binary>>& values)
+{
+	std::ofstream log;
+	string hold = "";
+	log.open("/home/pi/opendnp3/cpp/examples/master/BinaryValues.txt", std::ios::out | std::ios::app);
+
+	auto print = [&](const Indexed<Binary>& pair) {
+		hold = hold + "[BI" + std::to_string(pair.index) + "] : " + std::to_string(pair.value.value) + "\n";
+	};
+
+	values.ForeachItem(print);
+	log << hold;
+	log.close();
+}
+
+void AnalogLog(const HeaderInfo& info, const ICollection<Indexed<Analog>>& values)
+{
+	std::ofstream log;
+	string hold = "";
+	log.open("/home/pi/opendnp3/cpp/examples/master/AnalogValues.txt", std::ios::out | std::ios::app);
+
+	auto print = [&](const Indexed<Analog>& pair) {
+		hold = hold + "[AI" + std::to_string(pair.index) + "] : " + std::to_string(pair.value.value) + "\n";
+	};
+
+	values.ForeachItem(print);
+	log << hold;
+	log.close();
+}
+
+void CounterLog(const HeaderInfo& info, const ICollection<Indexed<Counter>>& values)
+{
+	std::ofstream log;
+	string hold = "";
+	log.open("/home/pi/opendnp3/cpp/examples/master/CounterValues.txt", std::ios::out | std::ios::app);
+
+	auto print = [&](const Indexed<Counter>& pair) {
+		hold = hold + "[CO" + std::to_string(pair.index) + "] : " + std::to_string(pair.value.value) + "\n";
+	};
+
+	values.ForeachItem(print);
+	log << hold;
+	log.close();
+}
+
 namespace asiodnp3
 {
 
+
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<Binary>>& values)
 {
+    ClearLog("/home/pi/opendnp3/cpp/examples/master/BinaryValues.txt");
+    BinaryLog(info, values);
     return PrintAll(info, values);
 }
 
@@ -37,11 +94,15 @@ void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Index
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<Analog>>& values)
 {
+//    ClearLog("/home/pi/opendnp3/cpp/examples/master/AnalogValues.txt");
+    AnalogLog(info, values);
     return PrintAll(info, values);
 }
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<Counter>>& values)
 {
+    ClearLog("/home/pi/opendnp3/cpp/examples/master/CounterValues.txt");
+    CounterLog(info, values);
     return PrintAll(info, values);
 }
 

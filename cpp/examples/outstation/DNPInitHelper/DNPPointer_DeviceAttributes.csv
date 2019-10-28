@@ -1,0 +1,45 @@
+﻿211,Device Attributes - Identifier of support for user-specific attributes,--,--,--,--,--
+212,Device Attributes - Number of master-defined data set prototypes,--,--,--,--,--
+213,Device Attributes - Number of outstation-defined data set prototypes,--,--,--,--,--
+214,Device Attributes - Number of master-defined data sets,--,--,--,--,--
+215,Device Attributes - Number of outstation-defined data sets,--,--,--,--,--
+216,Device Attributes - Max number of binary outputs per request,--,--,--,--,--
+217,Device Attributes - Local timing accuracy,LTMS,1,--,TmAcc,INS
+218,Device Attributes - Duration of timing accuraccy,LTMS,1,--,TmAcc,INS
+219,Device Attributes - Support for analog output events,--,--,--,--,--
+220,Device Attributes - Max analog output index,--,--,--,--,--
+221,Device Attributes - Number of analog outputs,--,--,--,--,--
+222,Device Attributes - Support for binary output events,--,--,--,--,--
+223,Device Attributes - Max binary output index,--,--,--,--,--
+224,Device Attributes - Number of binary outputs,--,--,--,--,--
+225,Device Attributes - Support for frozen counter events,--,--,--,--,--
+226,Device Attributes - Support for frozen counters,--,--,--,--,--
+227,Device Attributes - Support for counter events,--,--,--,--,--
+228,Device Attributes - Max counter index,--,--,--,--,--
+229,Device Attributes - Number of counter points,--,--,--,--,--
+230,Device Attributes - Support for frozen analog inputs,--,--,--,--,--
+231,Device Attributes - Support for analog input events,--,--,--,--,--
+232,Device Attributes - Maximum analog input index,--,--,--,--,--
+233,Device Attributes - Number of analog input points,--,--,--,--,--
+234,Device Attributes - Support for double-bit binary input events,--,--,--,--,--
+235,Device Attributes - Maximum double-bit binary input index,--,--,--,--,--
+236,Device Attributes - Number of double-bit binary input points,--,--,--,--,--
+237,Device Attributes - Support for binary input events,--,--,--,--,--
+238,Device Attributes - Max binary input index,--,--,--,--,--
+239,Device Attributes - Number of binary input points,--,--,--,--,--
+240,Device Attributes - Max transmit fragment size,--,--,--,--,--
+241,Device Attributes - Max receive fragment size,--,--,--,--,--
+242,Device Attributes - Device manufacturer -  software version,--,--,--,--,--
+243,Device Attributes - Device manufacturer - hardware version,--,--,--,--,--
+244,Not available - Reserved for future assignment,--,--,--,--,--
+245,Device Attributes - User-assigned location name,--,--,--,--,--
+246,Device Attributes - User-assigned ID code/number,--,--,--,--,--
+247,Device Attributes - User-assigned device name,--,--,--,--,--
+248,Device Attributes - Device serial number,LPHD,1,PhyNam,DPL,--
+249,Device Attributes - DNP subset and conformance,--,--,--,--,--
+250,Device Attributes - Device manufacturer product name and model,LPHD,1,PhyNam,DPL,--
+251,Not available - Reserved for future assignment,--,--,--,--,--
+252,Device Attributes - Device manufacturer - name,LPHD,1,PhyNam,DPL,--
+253,Not available - Reserved for future assignment,--,--,--,--,--
+254,Device Attributes -  Non-specific all attributes request,--,--,--,--,--
+255,Device Attributes - List of attribute variations,--,--,--,--,--

@@ -1,0 +1,108 @@
+﻿BI0,"System Communication Error",1,Normal,Alarm: Communications error exists in the outstation,LCCH,ChLiv,SPS,LCCH.ChLiv,2.4.1
+BI1,System Has Priority 1 Alarms,1,No P1 Alarms Active,Alarm: One or More P1 Alarms Active,CALH,DEROpSt.disconnected and in maintenance,SPS,CALH.GrAlm,2.4.1
+BI2,System Has Priority 2 Alarms,1,No P2 Alarms Active,Alarm: One or More P2 Alarms Active,CALH,GrWrn,SPS,CALH.GrWrn,2.4.1
+BI3,System Has Priority 3 Alarms,1,No P3 Alarms Active,Alarm: One or More P3 Alarms Active,CALH,GrInd,SPS,CALH.GrInd,2.4.1
+BI4,Storage State of Charge at Maximum.  Maximum Usable State of Charge reached.,1,Normal,Alarm,DSTO,SohHiWrn,SPS,DSTO.SohHiWrn,2.6.2
+BI5,Storage State of Charge is Too High.  Maximum Reserve Percentage (of usable capacity) reached.,1,Normal,Alarm,DSTO,SocHiAlm,SPS,DSTO.SocHiAlm,2.6.2
+BI6,Storage State of Charge is Too Low. Minimum Reserve Percentage (of usable capacity) reached.,1,Normal,Alarm,DSTO,SocLoAlm,SPS,DSTO.SocLoAlm,2.6.2
+BI7,Storage State of Charge is Depleted. Minimum Usable State of Charge Reached.,1,Normal,Alarm,DSTO,SohLoAlm,SPS,DSTO.SohLoAlm,2.6.2
+BI8,Storage Internal Temperature is Too High,1,Normal,Alarm,DBAT,IntnTmpHiAlm,SPS,DBAT.IntnTmpHiAlm,2.4.1
+BI9,Storage External (Ambient) Temperature is Too High,1,Normal,Alarm,DBAT,ExtTmpHiAlm,SPS,DBAT.ExtTmpHiAlm,2.4.1
+BI10,System Is In Local State.  System has been locked by a local operator which prevents other operators from executing commands. Note: Local State is also sometimes referred to as Maintenance State. Local State overrides Lockout State.,2,System not in local state,System in local state,DSTO,DEROpSt.disconnected and in maintenance,ENS,DSTO.DEROpSt.disconnected and in maintenance,2.4.6
+BI11,System Is In Lockout State.  System has been locked by an operator such that other operators may not execute commands. Lockout State is also sometimes referred to as Blocked State,2,System not locked out,System locked out,DSTO,DEROpSt.disconnected and blocked,ENS,DSTO.DEROpSt.disconnected and blocked,2.4.6
+BI12,"System Is Starting Up. Set to 1 when a BO ""System Initiate Start-up Sequence"" command has been received.",2,Not Starting Up,Start command has been received.,DSTO,DEROpSt.starting and synchronizing,ENS,DSTO.DEROpSt.starting and synchronizing,2.4.6
+BI13,"System Is Stopping Set to 1 when BO ""System Execute Stop"" command has been received.",2,Not Stopping,Emergency stop command has been received.,DSTO,DEROpSt.stopping,ENS,DSTO.DEROpSt.stopping,2.4.6
+BI14,System is Started (Return to Service). If any of the DER Units are started then true. DER Units in the maintenance operational state are excluded.,2,Null,Started,DSTO,DEROpSt.connected and idle,ENS,DSTO.DEROpSt.connected and idle,2.4.6
+BI15,System is Stopped (Cease to Energize). If all of the DER Units are stopped then true. DER Units in the maintenance operational state are excluded.,2,Null,Stopped,DSTO,DEROpSt.ceased to energize,ENS,DSTO.DEROpSt.ceased to energize,2.4.6
+BI16,System Permission to Start Status,2,Start Permission Not Granted,Start Permission Granted,DSTO,PrmConn,SPC,DSTO.PrmConn,2.4.6
+BI17,System Permission to Stop Status,2,Stop Permission Not Granted,Stop Permission Granted,DSTO,PrmDscon,SPC,DSTO.PrmDscon,2.4.6
+BI18,DER  is Connected and Idle,2,Null,Idle-Connected,DSTO,DEROpSt.connected and idle,ENS,DSTO.DEROpSt.connected and idle,2.4.6
+BI19,DER  is Connected and Generating,2,Null,On-Connected,DSTO,DEROpSt.connected and generating,ENS,DSTO.DEROpSt.connected and generating,2.4.6
+BI20,DER is Connected and Charging,2,Null,On-Charging-Connected,DSTO,DEROpSt.connected and consuming,ENS,DSTO.DEROpSt.connected and consuming,2.4.6
+BI21,DER is Off but Available to Start,2,Null,Off-Available,DSTO,DEROpSt.disconnected and available,ENS,DSTO.DEROpSt.disconnected and available,2.4.6
+BI22,DER is Off and Not Available to Start,2,Null,Off-Not-Available,DSTO,DEROpSt.disconnected and stand-by,ENS,DSTO.DEROpSt.disconnected and stand-by,2.4.6
+BI23,DER Connect/Disconnect Switch Closed Status,2,Open,Closed,DSTO,DEROpSt.off,ENS,DSTO.DEROpSt.off,2.4.4
+BI24,DER Connect/Disconnect Switch  Movement Status,2,Not Moving,Moving,CSWI,Pos,DPC,CSWI.Pos,2.4.4
+BI25,Islanded Mode. Determines how the DER behaves when in an Islanded configuration. <0>  Isochronous Mode. DER attempts to control voltage and frequency independent of configured curves and settings up to the limits of the machine's capabilities in order to achieve the AO Reference Voltage and AO nominal frequency. <1> Droop Mode.  DER acts as a follower using Volt/VAR and Freq/Watt curves.,3,Isochronous Mode,Droop Mode,DSTO,IsldCtlFol,SPG,DSTO.IsldCtlFol,2.11
+BI26,Sensed Grid Config Detection Enabled.  If Enabled the DER may independently change its Active Settings Group based on locally observed grid conditions. <0> No Autonomous Detection. <1> Autonomous Detection.  Inverter's Active Settings Group may differ from the Requested Settings Group,3,Not Ready,Ready,DECP,ECPIsldAuto,SPG,DECP.ECPIsldAuto,2.11
+BI27,Storage Capacity Units.  Determines whether energy storage values are expressed in units of Amp-hrs or Watt-hrs.,3,Amp-hrs (default),Watt-hrs,DSTO,AGra,SPG,DSTO.AGra,2.6.2
+BI28,Time Constant Mode. Indicates whether Time Constant Ramp parameters are interpreted as Open Loop Response times or 3Tau values.,3,Open Loop Response Time,3Tau Value,DSTO,OpnLoopTau,SPG,DSTO.OpnLoopTau,2.3.4
+BI29,Power Factor Excitation When Discharging / Generating,2,Producing VARs - Q1,Absorbing VARs - Q4,DFPF,PFGnExtSet,SPG,DFPF.PFGnExtSet,2.7
+BI30,Power Factor Excitation When Charging,2,Producing VARs - Q2,Absorbing VARs - Q3,DFPF,PFLodExtSet,SPG,DFPF.PFLodExtSet,2.7
+BI31,Supports Low/High Voltage Ride-Through Mode,3,Not Supported,Supported,DHVT,--,ENS,--,2.3.1
+BI32,Supports Low/High Frequency Ride-Through Mode,0,Not Supported,Supported,DHFT,--,ENS,--,2.3.1
+BI33,Supports Dynamic Reactive Current Support Mode,0,Not Supported,Supported,DRGS,--,ENS,--,2.3.1
+BI34,Supports Dynamic Volt-Watt Mode,0,Not Supported,Supported,DVWD,--,ENS,--,2.3.1
+BI35,Supports Frequency-Watt Mode,0,Not Supported,Supported,DHFW,--,ENS,--,2.3.1
+BI36,Supports Active Power Limit Mode,0,Not Supported,Supported,DWLM,--,ENS,--,2.3.1
+BI37,Supports Charge/Discharge Mode,0,Not Supported,Blocked (Disabled),DWGC,--,ENS,--,2.3.1
+BI38,Supports Coordinated Charge/Discharge Mode,0,Not Supported,Supported,DTCD,--,ENS,--,2.3.1
+BI39,Supports Active Power Response Mode #1,0,Not Supported,Supported,DLFL,--,ENS,--,2.3.1
+BI40,Supports Active Power Response Mode #2,0,Not Supported,Supported,DGFL,--,ENS,--,2.3.1
+BI41,Supports Active Power Response Mode #3,0,Not Supported,Supported,DGFL,--,ENS,--,2.3.1
+BI42,Supports Automatic Generation Control Mode,0,Not Supported,Supported,DAGC,--,ENS,--,2.3.1
+BI43,Supports Active Power Smoothing Mode,0,Not Supported,Supported,DWSM,--,ENS,--,2.3.1
+BI44,Supports Volt-Watt Mode,0,Not Supported,Supported,DVWC,--,ENS,--,2.3.1
+BI45,Supports Frequency-Watt Curve Mode,0,Not Supported,Supported,DVWC,--,ENS,--,2.3.1
+BI46,Supports Constant Vars Mode,0,Not Supported,Supported,DVAR,--,ENS,--,2.3.1
+BI47,Supports Fixed Power Factor Mode,0,Not Supported,Supported,DFPF,--,ENS,--,2.3.1
+BI48,Supports Volt-VAR Control Mode,0,Not Supported,Supported,DVVC,--,ENS,--,2.3.1
+BI49,Supports Watt-Var Mode,0,Not Supported,Supported,DWVR,--,ENS,--,2.3.1
+BI50,Supports Power Factor Correction Mode,0,Not Supported,Supported,DPFC,--,ENS,--,2.3.1
+BI51,Supports Pricing Mode,0,Not Supported,Supported,DPRG,--,ENS,--,2.3.1
+BI52,Overvoltage Disconnect Protection Blocked,1,Not Blocked,Blocked (Disabled),PTOV,Blk,SPS,PTOV.Blk,2.5.1
+BI53,Overvoltage Disconnect Protection Started,1,Not Started,Started (Evaluating),PTOV,Str.general,ACD,PTOV.Str.general,2.5.1
+BI54,Overvoltage Disconnect Protection Operated,1,Not Operated,Operated (Disconnected),PTOV,Op.general,ACT,PTOV.Op.general,2.5.1
+BI55,Undervoltage Disconnect Protection Blocked,1,Not Blocked,Blocked (Disabled),PTUV,Blk,SPS,PTUV.Blk,2.5.1
+BI56,Undervoltage Disconnect Protection Started,1,Not Started,Started (Evaluating),PTUV,Str.general,ACD,PTUV.Str.general,2.5.1
+BI57,Undervoltage Disconnect Protection Operated,1,Not Operated,Operated (Disconnected),PTUV,Op.general,ACT,PTUV.Op.general,2.5.1
+BI58,Over Frequency Disconnect Protection Blocked,1,Not Blocked,Blocked (Disabled),PTOF,Blk,SPC,PTOF.Blk,2.5.2
+BI59,Over Frequency Disconnect Protection Started,1,Not Started,Started (Evaluating),PTOF,Str.general,ACD,PTOF.Str.general,2.5.2
+BI60,Over Frequency Disconnect Protection Operated,1,Not Operated,Operated (Disconnected),PTOF,Op.general,ACT,PTOF.Op.general,2.5.2
+BI61,Under Frequency Disconnect Protection Blocked,1,Not Blocked,Blocked (Disabled),PTUF,Blk,SPS,PTUF.Blk,2.5.2
+BI62,Under Frequency Disconnect Protection Started,1,Not Started,Started (Evaluating),PTUF,Str.general,ACD,PTUF.Str.general,2.5.2
+BI63,Under Frequency Disconnect Protection Operated,1,Not Operated,Operated (Disconnected),PTUF,Op.general,ACT,PTUF.Op.general,2.5.2
+BI64,Operating Mode - Low/High Voltage Ride-Through,2,Disabled,Enabled,DHVT,ModEna,SPC,DVRT.ModEna,2.5.1
+BI65,Operating Mode - Low/High Frequency Ride-Through,2,Disabled,Enabled,DHFT,ModEna,SPC,DFRT.ModEna,2.5.2
+BI66,Operating Mode - Dynamic Reactive Current Support Enabled,2,Disabled,Enabled,DRGS,ModEna,ENC,DRGS.ModEna,2.5.3
+BI67,Operating Mode - Dynamic Volt-Watt Enabled,2,Disabled,Enabled,DVWD,ModEna,SPC,DVWD.ModEna,2.5.5
+BI68,Operating Mode - Frequency-Watt Enabled,2,Disabled,Enabled,DHFW,ModEna,SPC,DFWP.ModEna,2.5.3
+BI69,Operating Mode - Active Power Limit Enabled,2,Disabled,Enabled,DWLM,ModEna,SPC,DWLM.ModEna,2.6.1
+BI70,Operating Mode - Charge/Discharge  Enabled,2,Disabled,Enabled,DWGC,ModEna,SPC,DWGC.ModEna,2.6.2
+BI71,Operating Mode - Coordinated Charge / Discharge Management Enabled,2,Disabled,Enabled,DPKP,ModEna,SPC,DTCD.ModEna,2.6.3
+BI72,Operating Mode - Active Power Response Mode #1 Enabled,2,Disabled,Enabled,DGFL,ModEna,SPC,DLFL.ModEna,2.6.4.1
+BI73,Operating Mode - Active Power Response Mode #2 Enabled,2,Disabled,Enabled,DLFL,ModEna,SPC,DGFL.ModEna,2.6.4.2
+BI74,Operating Mode - Active Power Response Mode #3 Enabled,2,Disabled,Enabled,DGFL,ModEna,SPC,DGFL.ModEna,2.6.4.2
+BI75,Operating Mode - Automatic Generation Control Enabled,2,Disabled,Enabled,DAGC,ModEna,SPC,DAGC.ModEna,2.6.5
+BI76,Operating Mode - Active Power Smoothing Enabled,2,Disabled,Enabled,DWSM,ModEna,SPC,DWSM.ModEna,2.6.6
+BI77,Operating Mode - Volt-Watt Enabled,2,Disabled,Enabled,DVWC,ModEna,SPC,DVWC.ModEna,2.6.7
+BI78,Operating Mode - Frequency-Watt Curve Enabled,2,Disabled,Enabled,DHFW,ModEna,SPC,DFWC.ModEna,2.6.8
+BI79,Operating Mode - Constant VArs Enabled,2,Disabled,Enabled,DVAR,ModEna,SPC,DVAR.ModEna,2.7.1
+BI80,Operating Mode - Fixed Power Factor Enabled,2,Disabled,Enabled,DFPF,ModEna,SPC,DFPF.ModEna,2.7.2
+BI81,Operating Mode - Volt- VAR Control Enabled,2,Disabled,Enabled,DVVR,ModEna,SPC,DVVC.ModEna,2.7.3
+BI82,Operating Mode - Watt- VAr Enabled,2,Disabled,Enabled,DWVR,ModEna,SPC,DWVR.ModEna,2.7.4
+BI83,Operating Mode - Power Factor Correction Enabled,2,Disabled,Enabled,DPFC,ModEna,SPC,DPFC.ModEna,2.7.5
+BI84,Operating Mode - Pricing Enabled,2,Disabled,Enabled,DPRG,ModEna,SPC,DPRG.ModEna,2.8
+BI85,Operating Mode - Event-Based Reactive Current Support Enabled,2,Disabled,Enabled,DRGS,ModEna,SPC,RDGS.ModEna,2.5.4.3
+BI86,Frequency-Watt Mode - Use Hysteresis,2,Disabled,Enabled,DHFW,HysEna,SPG,DFWP.HysEna,2.5.3
+BI87,Frequency-Watt Mode - Snapshot of Power,2,Not Active,Active,DHFW,SnptEna,SPG,DFWP.SnptEna,2.5.3
+BI88,Frequency-Watt Curve Mode - Use Hysteresis,2,Disabled,Enabled,DLFW,HysEna,SPG,DFWC.HysEna,2.6.8
+BI89,Frequency-Watt Curve Mode - Snapshot of Power,2,Not Active,Active,DLFW,SnptEna,SPG,DFWP.SnptEna,2.6.8
+BI90,Charge/Discharge Mode - Use Ramp Rates. Indicates whether or not Charge/Discharge should use specified ramp rates or time constants,2,Use Time Constants,Use Ramp Rates,DWGC,UseRmpRte,SPG,DWGC.UseRmpRte,2.6.2
+BI91,AGC Mode - Use Ramp Rates. Indicates whether or not charge/discharge should use specified ramp rates or time constants,2,Use Time Constants,Use Ramp Rates,DAGC,UseRmpRte,SPG,DAGC.UseRmpRte,2.6.5
+BI92,Volt-Watt - Use Ramp Rates and Time Constants,2,Use Time Constants,Use Ramp Rates AND Time Constants,DVWC,UseRmpRte,SPG,DVWC.UseRmpRte,2.7.1
+BI93,Volt-VAr Enable Autonomous Voltage Reference Adjustment,2,Disabled,Enabled,DVVR,VRefAdjEna,SPG,DVWC.UseRmpRte,2.7.3
+BI94,System Meter Active Power is Too High,1,Normal,Alarm,MMXU,TotW.range,MV,MMXU.TotW.range,2.4.3
+BI95,System Meter Active Power is Too Low,1,Normal,Alarm,MMXU,TotW.range,MV,MMXU.TotW.range,2.4.3
+BI96,System Meter Reactive Power is Too High,1,Normal,Alarm,MMXU,TotVAr.range,MV,MMXU.TotVAr.range,2.4.3
+BI97,System Meter Reactive Power is Too Low,1,Normal,Alarm,MMXU,TotVAr.range,MV,MMXU.TotVAr.range,2.4.3
+BI98,System Meter Power Factor is Too High,1,Normal,Alarm,MMXU,TotPF.range,MV,MMXU.TotPF.range,2.4.3
+BI99,System Meter Power Factor is Too Low,1,Normal,Alarm,MMXU,TotPF.range,MV,MMXU.TotPF.range,2.4.3
+BI100,System Meter Phase A Voltage is Too High,1,Normal,Alarm,MMXU,PhV.phsA.range,WYE,MMXU.PhV.phsA.range,2.4.3
+BI101,System Meter Phase A Voltage is Too Low,1,Normal,Alarm,MMXU,PhV.phsA.range,WYE,MMXU.PhV.phsA.range,2.4.3
+BI102,System Meter Phase B Voltage is Too High,1,Normal,Alarm,MMXU,PhV.phsB.range,WYE,MMXU.PhV.phsB.range,2.4.3
+BI103,System Meter Phase B Voltage is Too Low,1,Normal,Alarm,MMXU,PhV.phsB.range,WYE,MMXU.PhV.phsB.range,2.4.3
+BI104,System Meter Phase C Voltage is Too High,1,Normal,Alarm,MMXU,PhV.phsC.range,WYE,MMXU.PhV.phsC.range,2.4.3
+BI105,System Meter Phase C Voltage is Too Low,1,Normal,Alarm,MMXU,PhV.phsC.range,WYE,MMXU.PhV.phsC.range,2.4.3
+BI106,System Meter Communication Error,1,Normal: No Active Communications Error,Alarm: Active Communications Error,LCCH,ChLiv,SPS,LCCH.ChLiv,2.4.3
+BI107,Selected Curve is Referenced by a Mode,1,Curve is Not Referenced,Curve is Referenced,n/a,n/a,n/a,n/a,2.3.3

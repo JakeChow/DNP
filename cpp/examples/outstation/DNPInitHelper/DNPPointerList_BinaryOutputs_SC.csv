@@ -1,0 +1,42 @@
+﻿BO0,System Set Lockout State,Do Not Lock Out,Lock Out,2,2,DSTO,DEROpSt.disconnected and blocked,ENS,DSTO.DEROpSt.disconnected and blocked,2.10.2
+BO1,"System Initiate Start-up Sequence (Return to Service) Setting this to 1 does the following: • Sets BI ""System Is Starting"" to 1 indicating that the system is starting up. Additional start-up status can be found in AI ""System Start-up Status"". • Instructs all batteries to connect. • Once each battery has reported that it has connect successfully instructs corresponding DER Unit to start. System can be shut down by executing B0 ""Emergency Stop"" command. This operation is the same as California Rule 21 ""Soft Start"".",Do not Initiate Start-up,Initiate Start-up,2,2,DCTE,RtnSrvReq,SPC,DCTE.RtnSrvReq,2.4.5
+BO2,"System Execute Stop (Cease to Energize) Setting this to 1 does the following: - Sets BI ""System Is Emergency Stopping"" to 1 indicating that an emergency stop is in progress. - Ensures that any executing operating mode are shut down (disabled) - Ensures that any executing schedules are shut down (disabled). - Instructs all inverters to shut down - Instructs all batteries to disconnect. System can be started again by executing BO ""Initiate Start-up Sequence"" command.",No Change,Stop (Emergency),2,2,DCTE,CeaEngzReq,SPC,DCTE.CeaEngzReq,2.4.5
+BO3,System Permission to Start,Start Permission not Granted,Start Permission Granted,2,2,DSTO,PrmConn,SPC,DSTO.PrmConn,2.4.5
+BO4,System Permission to Stop,Stop Permission not Granted,Stop Permission Granted,2,2,DSTO,PrmDscon,SPC,DSTO.PrmDscon,2.4.5
+BO5,DER Connect/Disconnect Switch,Open Switch,Close Switch,2,2,CSWI,Pos,DPC,CSWI. Pos,2.4.4
+BO6,Islanded Mode.  Determines how the DER behaves when in an Islanded configuration. <0>  Isochronous Mode.  DER attempts to control voltage and frequency independent of configured curves and settings up to the limits of the machine's capabilities in order to achieve AO reference voltage and AO nominal frequency. <1> Droop Mode.  DER acts as a follower using Volt/VAR and Freq/Watt curves.,Isochronous Mode,Drop Mode,2,2,DGEN,IsldCtlFol,SPG,DGEN.IsldCtlFol,2.11
+BO7,Enable Sensed Grid Config Detection.  If Enabled the DER may independently change its Active Settings Group based on locally observed grid conditions. <0> No Autonomous Detection. <1 Autonomous Detection.  Inverter's Active Settings Group  may differ from the Requested Settings Group,No Autonomous Detection,Autonomous Detection,2,2,DECP,ECPIsld,ENG,DECP.ECPIsld,2.11
+BO8,Storage Capacity Units.  Determines whether the energy storage values are expressed in Amp-hrs or Watt-hrs.,Amp-hrs (default),Watt-hrs,2,2,DSTO,AGra,ASG,DSTO.AGra,2.6.2
+BO9,Time Constant Mode.  Indicates whether Time C onstant Ramp parameters are interpreted as Open Loop Response times or 3Tau values.,Open Loop Response Time,3Tau Value,2,2,DSTO,OpnLoopTau,SPG,DSTO.OpnLoopTau,2.3.4
+BO10,Power Factor Excitation When Discharging / Generating,Producing VARs - Q1,Absorbing VARs - Q4,2,2,DFPF,PFGnExtSet,SPG,DFPF.PFGnExtSet,2.7
+BO11,Power Factor Excitation When Charging,Producing VARs - Q2,Absorbing VARs - Q3,2,2,DFPF,PFLodExtSet,SPG,DFPF.PFLodExtSet,2.7
+BO12,Enable Low/High Voltage Ride-Through Mode,Disable,Enable,2,2,DHVT,ModEna,SPC,DHVT.ModEna,2.3.1
+BO13,Enable Low/High Frequency Ride-Through Mode,Disable,Enable,2,2,DHFT,ModEna,SPC,DHFT.ModEna,2.3.1
+BO14,Enable Dynamic Reactive Current Support Mode,Disable,Enable,2,2,DRGS,ModEna,SPC,DRGS.ModEna,2.3.1
+BO15,Enable Dynamic Volt-Watt Mode,Disable,Enable,2,2,DVWD,ModEna,SPC,DVWD.ModEna,2.3.1
+BO16,Enable  Frequency-Watt Mode,Disable,Enable,2,2,DHFW,ModEna,SPC,DHFW.ModEna,2.3.1
+BO17,Enable Active Power Limit Mode,Disable,Enable,2,2,DWLM,ModEna,SPC,DWLM.ModEna,2.3.1
+BO18,Enable Charge/Discharge Mode,Disable,Enable,2,2,DWGC,ModEna,SPC,DWGC.ModEna,2.3.1
+BO19,Enable Coordinated Charge/Discharge Mode,Disable,Enable,2,2,DTCD,ModEna,SPC,DTCD.ModEna,2.3.1
+BO20,Enable Active Power Response Mode #1,Disable,Enable,2,2,DPKP,ModEna,SPC,DPKP.ModEna,2.3.1
+BO21,Enable Active Power Response Mode #2,Disable,Enable,2,2,DGFL,ModEna,SPC,DGFL.ModEna,2.3.1
+BO22,Enable Active Power Response Mode #3,Disable,Enable,2,2,DLFL,ModEna,SPC,DLFL.ModEna,2.3.1
+BO23,Enable Automatic Generation Control Mode,Disable,Enable,2,2,DAGC,ModEna,SPC,DAGC.ModEna,2.3.1
+BO24,Enable Active Power Smoothing Mode,Disable,Enable,2,2,DWSM,ModEna,SPC,DWSM.ModEna,2.3.1
+BO25,Enable Volt-Watt Mode,Disable,Enable,2,2,DVWC,ModEna,SPC,DVWC.ModEna,2.3.1
+BO26,Enable Frequency-Watt Curve Mode,Disable,Enable,2,2,DHFW,ModEna,SPC,DHFW.ModEna,2.3.1
+BO27,Enable Constant VArs Mode,Disable,Enable,2,2,DVAR,ModEna,SPC,DVAR.ModEna,2.3.1
+BO28,Enable Fixed Power Factor Mode,Disable,Enable,2,2,DFPF,ModEna,SPC,DFPF.ModEna,2.3.1
+BO29,Enable Volt-VAR Control Mode,Disable,Enable,2,2,DVVC,ModEna,SPC,DVVC.ModEna,2.3.1
+BO30,Enable Watt-VAr Mode,Disable,Enable,2,2,DWVR,ModEna,SPC,DWVR.ModEna,2.3.1
+BO31,Enable Power Factor Correction Mode,Disable,Enable,2,2,DPFC,ModEna,SPC,DPFC.ModEna,2.3.1
+BO32,Enable Pricing Mode,Disable,Enable,2,2,DPRG,ModEna,SPC,DPRG.ModEna,2.3.1
+BO33,Enable Event-Based Reactive Current Support Mode,Disable,Enable,2,2,DRGS,ArGraMod,SPC,DRGS.ArGraMod,2.5.4.3
+BO34,Frequency-Watt Mode - Use Hysteresis,Disable,Enable,2,2,DHFW,HysEna,SPG,DHFW.HysEna,2.5.3
+BO35,Frequency-Watt Mode - Snapshot of Power,Not Active,Active,2,2,DHFW,SnptEna,SPG,DHFW.SnptEna,2.5.3
+BO36,Frequency-Watt Curve Mode - Use Hysteresis,Disable,Enable,2,2,DLFW,HysEna,SPG,DLFW.HysEna,2.6.8
+BO37,Frequency-Watt Curve Mode - Snapshot of Power,Not Active,Active,2,2,DLFW,SnptEna,SPG,DLFW.SnptEna,2.6.8
+BO38,Charge/Discharge Mode - Use Ramp Rates. Indicates whether or not Charge/Discharge should use specified ramp rates or time constants,Use Time Constants,Use Ramp Rates,2,2,DWGC,UseRmpRte,SPG,DWGC.UseRmpRte,2.6.2
+BO39,AGC Mode - Use Ramp Rates. Indicate whether or not charge/discharge should use specified ramp rates or time constants,Use Time Constants,Use Ramp Rates,2,2,DAGC,UseRmpRte,SPG,DAGC.UseRmpRte,2.6.5
+BO40,Volt-Watt - Use Ramp Rates and Time Constants.  Indicates whether Volt-Watt mode should use only Time Constants or both Time Constants and Ramp Rates,Use Time Constants,Use Ramp Rates AND Time Constants,2,2,DWST,UseRmpRte,SPG,DWST.UseRmpRte,2.7.1
+BO41,Volt-VAr Enable Autonomous Voltage Reference Adjustment,Disable,Enable,2,2,DVVR,VRefAdjEna,SPG,DVVR.VRefAdjEna,2.7.3

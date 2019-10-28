@@ -1,0 +1,4 @@
+﻿C0,System Active Energy Delivered.  Measured in watt-hours.,n/a,Yes,3,MMTR,1,SupWh,BCR,2.4.1
+C1,System Active Energy Received.  Measured in watt-hours.,n/a,Yes,3,MMTR,1,DmdWh,BCR,2.4.1
+C2,System Reactive Energy Delivered.  Measured in VAr-hours.,n/a,Yes,3,MMTR,1,SupVArh,BCR,2.4.1
+C3,System Reactive Energy Received.  Measured in VAr-hours.,n/a,Yes,3,MMTR,1,DmdVArh,BCR,2.4.1

@@ -1,0 +1,461 @@
+﻿AO0,Reference Voltage,0,2147483647,0.1,0,Volts,DECP,VRef,ASG,2.10.4
+AO1,Reference Voltage Offset,-2147483648,2147483647,0.1,0,Volts,DECP,VRefOfs,ASG,2.10.4
+AO2,Nominal Grid Frequency,0,70000,0.001,0,Hz,DECP,EcpNomHz,ASG,2.10.4
+AO3,Open Loop Response Time Percentage.  Percent of target to reach within the open loop response time.  Default is 90%.,0,1000,0.1,0,Percent,DSTO,OpnLoopPct,--,2.3.4
+AO4,Power Factor Sign convention: <1>  IEC - active power <2> IEEE - lead/lag,1,2,1,0,None,MMXU,PFSign,ENG,2.7
+AO5,Reference for Reactive Power Setpoints.  Selects which setpoint is active.  Default is <3>. <0> Not applicable / Unknown <1> Percent of Maximum Active Power (WMax) <2> Percent of Maximum Reactive Power (VArMax) <3> Percent of Available Reactive Power (VArAval),0,3,1,0,None (list),DSTO,VArRef,ENG,2.7
+AO6,DER Start (Return to Service) Voltage High Limit. Percent o Reference Voltage.,0,20000,0.01,0,Percent,DCTE,VHiLim,ASG,2.4.5
+AO7,DER Start (Return to Service) Voltage Low Limit. Percent of Reference Voltage.,0,10000,0.01,0,Percent,DCTE,VLoLim,ASG,2.4.5
+AO8,DER Start (Return to Service) Frequency High Limit,0,70000,0.001,0,Hz,DCTE,HzHiLim,ASG,2.4.5
+A09,DER Start (Return to Service) Frequency Low Limit,0,70000,0.001,0,Hz,DCTE,HzLoLim,ASG,2.4.5
+AO10,DER Start (Return to Service) Delay,0,2147483647,1,0,Seconds,DCTE,RtnSrvDlyTim,ING,2.4.5
+AO11,DER Start (Return to Service) Time Window,0,2147483647,1,0,Seconds,DCTE,WinTms,ING,2.4.5
+AO12,DER Start (Return to Service) Ramp Up Time,0,2147483647,1,0,Seconds,DCTE,RtnSrvRmpTim,ING,2.4.5
+AO13,DER Stop (Cease to Energize)Time Window,0,2147483647,1,0,Seconds,DCTE,WinTms,ING,2.4.5
+AO14,DER Stop (Cease to Energize) Ramp Down Time,0,2147483647,1,0,Seconds,DCTE,RmpTms,ING,2.4.5
+AO15,DER Stop (Cease to Energize) Reversion Timeout Period. Time to revert from the stopped state and return to service.,0,2147483647,1,0,Seconds,DCTE,RvrtTms,ING,2.4.5
+AO16,Connect/Disconnect Time Window,0,2147483647,1,0,Seconds,DCTE,WinTms,ING,2.4.4
+AO17,Connect/Disconnect Reversion Timeout Period . Timeout (reversion time is for the Disconnect only),0,2147483647,1,0,Seconds,DCTE,RvrtTms,ING,2.4.4
+AO18,Requested Settings Group <0> Not Used <1> Unspecified / Autonomously Determined (see BO Enable Sensed Grid Config Detection) <2> Factory Configuration <3> Default Configuration / Comms Lost <4> Normal Grid-Connected Configuration <5> Islanded Condition 1 (small local island) <6> Islanded Condition 2 (larger area island) <7> Islanded Condition 3 (largest regional island) <8> 1st Alternate Grid-Connected Configuration <9> 2nd Alternate Grid-Connected Configuration <10> 3rd Alternate Grid Connected Configuration <11-255> Reserved for future assignment,0,255,1,0,None(list),DECP,EcpIsldSt,ENG,2.11
+AO19,Settings Group Being Edited <0> Not Used <1> Unspecified / Autonomously Determined (see BO Enable Sensed Grid Config Detection) <2> Factory Configuration <3> Default Configuration / Comms Lost <4> Normal Grid-Connected Configuration <5> Islanded Condition 1 (small local island) <6> Islanded Condition 2 (larger area island) <7> Islanded Condition 3 (largest regional island) <8> 1st Alternate Grid-Connected Configuration <9> 2nd Alternate Grid-Connected Configuration <10> 3rd Alternate Grid-Connected Configuration <11-255> Reserved for future assignment,0,255,1,0,None(list),DRCC,EcpIsldSt,ENG,2.11
+AO20,Freeze Counter Interval. Interval between freeze counter operations after the initial occurrence. A zero value means the free counter operation is not repeated.,0,2147483647,1,0,n/a,--,--,--,2.2.7
+AO21,Freeze Counter Interval Units. Units of the interval between freeze counter operations.,0,9,1,0,None(list),--,--,--,2.2.7
+AO22,Low/High Voltage Ride-Through Signal Meter ID.  Referenced ECP.  This is the meter from which current is being read to evaluate and provide support.,0,2147483647,1,0,n/a,DHVT,EcpRef 16,ORG,2.5.1
+AO23,Low/High Voltage Ride-Through High Must Trip Curve Index. Index of the Voltage Ride-through curve which specifies trip points when the voltage is high.,0,2147483647,1,0,n/a,PTOV,BlkRef,ORG,2.5.1
+AO24,Low/High Voltage Ride-Through Low Must Trip Curve Index.  Index of the Voltage Ride-through curve which specifies trip points when the voltage is low.,0,2147483647,1,0,n/a,PTUV,BlkRef,ORG,2.5.1
+AO25,Low/High Voltage Ride-Through High Momentary CessationTrip Curve Index.  Index of the Voltage Ride-through curve which specifies where generation/ discharging must stop when the voltage is high.,0,2147483647,1,0,n/a,PTOV,BlkRef,ORG,2.5.1
+AO26,Low/High Voltage Ride-Through Low Must Trip Curve Index.  Index of the Voltage Ride-through curve which specifies Where generation/ discharging must stop when the voltage is low.,0,2147483647,1,0,n/a,PTUV,BlkRef,ORG,2.5.1
+AO27,Low/High Frequency Ride-Through Signal Meter ID. Referenced ECP.  This is the meter from which current is being read to evaluate and provide support.,0,2147483647,1,0,n/a,DHFT,EcpRef 17,ORG,2.5.2
+AO28,Low/High Frequency Ride-Through High Must Trip Curve Index. Index of the Frequency Ride-through curve which specifies trip points when the frequency is high.,0,2147483647,1,0,n/a,PTOF,BlkRef,ORG,2.5.2
+AO29,Low/High Frequency Ride-Through Low Must Trip Curve Index. Index of the Frequency Ride-through curve which specifies trip points when the frequency is low.,0,2147483647,1,0,n/a,PTUF,BlkRef,ORG,2.5.2
+AO30,Low/High Frequency Ride-Through High Momentary Cessation Curve Index. Index of the Frequency Ride-through curve which specifies where generation/discharging must stop when the frequency is high.,0,2147483647,1,0,n/a,PTOF,BlkRef,ORG,2.5.2
+AO31,Low/High Frequency Ride-Through Low Momentary Cessation Curve Index. Index of the Frequency Ride-through curve which specifies where generation/discharging must stop when the frequency is low.,0,2147483647,1,0,n/a,PTUF,BlkRef,ORG,2.5.2
+AO32,Dynamic Reactive Current Support Mode Priority,0,number of modes,1,0,n/a,DRGS,ModPrio,ING,2.10.4
+AO33,Dynamic Reactive Current Support Enabling Time Window,0,2147483647,1,0,Seconds,DRGS,WinTms,ING,2.3.2
+AO34,Dynamic Reactive Current Support Enabling Ramp Time,0,2147483647,1,0,Seconds,DRGS,RmpTms,ING,2.3.2
+AO35,Dynamic Reactive Current Support Reversion Timeout Period,0,2147483647,1,0,Seconds,DRGS,RvrtTms,ING,2.3.2
+AO36,Dynamic Reactive Curren Support Signal Meter ID,0,2147483647,1,0,n/a,DRGS,EcpRef 18,ORG,2.5.3
+AO37,Dynamic Reactive Current Support - Gradient Mode. <0> Undefined <1> Gradients reach 0 at the moving average Voltage <2> Gradients reach 0 at the Voltage deadbands,0,2,1,0,None (list),DRGS,ArGraMod,ENG,2.5.3
+AO38,Dynamic Reactive Current Support Deadband Minimum Voltage.  Percentage of the nominal voltage (DRCT.Vref) measured from the moving average voltage (RDGS.VAv). Support is no longer applied when the voltage stays above this value for the length of the Hold Time.,-10000,0,0.1,0,Percent,DRGS,DbVMin,ASG,2.5.3
+AO39,Dynamic Reactive Current Support Deadband Maximum Voltage.  Percentage of the nominal voltage (DRCT.Vref) measured from the moving average voltage (RDGS.VAv). Support is no longer applied when the voltage stays below this value for the length of the Hold Time.,0,10000,0.1,0,Percent,DRGS,DbVMax,ASG,2.5.3
+AO40,Dynamic Reactive Current Support Gradient for Sags. Percentage of the rated current to apply capacitively per percentage of the negative deviation from the moving average voltage (RDGS.Av).   It is a ratio of percent and is therefore unitless.,-2147483648,2147483647,0.001,0,Percent current per percent voltage deviation,DRGS,ArGraSag,ASG,2.5.3
+AO41,Dynamic Reactive Current Support Gradient for Swells. Percentage of the rated current (DRAT.ARtg) to apply inductively per percentage of the positive deviation from the moving average voltage (RDGS.Av). It is a ratio of percent and is therefore unitless.,-2147483648,2147483647,0.001,0,Percent current per percent voltage deviation,DRGS,ArGraSwl,ASG,2.5.3
+AO42,Dynamic Reactive Current Support Filter Time for Moving Average Voltage (RDGS.VAv). Used to determine amount of dynamic reactive current support.,0,2147483647,1,0,Seconds,DRGS,FilTms,ING,2.5.3
+AO43,Dynamic Reactive Current Support Block Zone Voltage. Percentage of the nominal voltage (DRCT.VRef) below which no reactive current support shall be applied. ,0,1000,0.1,0,Percent,DRGS,BlkZnV,ASG,2.5.3
+AO44,Dynamic Reactive Current Support Hysteresis Block Zone Voltage. Percentage of the nominal voltage (DRCT.VRef). After being blocked reactive current support shall not resume until the voltage has been above BlkZnV + HysBlkZnV. ,0,1000,0.1,0,Percent,DRGS,HysBlkZnV,ASG,2.5.3
+AO45,"Dynamic Reactive Current Support Block Zone Time. Time in milliseconds from the beginning of any ""sag"" event before which dynamic reactive current support will always continue regardless of how low voltage may sag. ",0,2147483647,1,0,ms,DRGS,BlkZnTmms,ING,2.5.3
+AO46,Dynamic Reactive Current Support Start Hold Time.  When the voltage exceeds the deadband limits for this length of time (measured in milliseconds) the - sag - or  - swell - event begins and the DER may begin altering active power output.,0,2147483647,1,0,ms,DRGS,StrHoldTmms,ING,2.5.3
+AO47,"Dynamic Reactive Current Support End Hold Time.  When the voltage returns to within the deadband limits for this length of time (measured in milliseconds) the ""sag"" or ""swell"" event is considered to be over.  Reactive current support ends frozen values are unfrozen and a new event can begin.",0,2147483647,1,0,ms,DRGS,EndHoldTmms,ING,2.5.3
+AO48,Dynamic Volt-Watt Mode Priority,0,number of modes,1,0,n/a,DVWD,ModPrio,ING,2.10.4
+AO49,Dynamic Volt-Watt Enabling Time Window,0,2147483647,1,0,Seconds,DVWD,WinTms,ING,2.3.2
+AO50,Dynamic Volt-Watt Enabling Ramp Time,0,2147483647,1,0,Seconds,DVWD,RmpTms,ING,2.3.2
+AO51,Dynamic Volt-Watt Reversion Timeout period,0,2147483647,1,0,Seconds,DVWD,RvrtTms,ING,2.3.2
+AO52,Dynamic Volt-Watt Signal Meter ID,0,2147483647,1,0,n/a,DVWD,EcpRef 19,ORG,2.5.5
+AO53,Dynamic Volt-Watt Gradient. Signed unit-less quantity that establishes the ratio of additional Watts supplied (expressed in terms of % DRCT.WMax) to the present difference from the moving average voltage (expressed as % DRCT.VRef).,-2147483647,2147483647,0.1,0,Percent watts per percentage voltage difference,DVWD,DynVWGra,ASG,2.5.5
+AO54,Dynamic Volt-Watt Filter Time. The time in seconds used to calculate the moving average voltage for dynamic Volt-Watt support.,0,2147483647,1,0,Seconds,DVWD,VWFilTms,ASG,2.5.5
+AO55,Dynamic Volt-Watt Lower Deadband. Percentage of the nominal voltage (DRCT.Vref) measured below the moving average voltage. If the present voltage is above this value no addiotional Watts shall be supplied.,0,1000,0.1,0,Percent,DVWD,DbVWLo,ASG,2.5.5
+AO56,Dynamic Volt-Watt Upper Deadband. Percentage of the nominal voltage (DRCT.Vref) measured above the moving average voltage. If the present voltage is below this value no additional Watts shall be supplied.,0,1000,0.1,0,Percent,DVWD,DbVWHi,ASG,2.5.5
+AO57,Frequency-Watt Mode Priority,0,number of modes,1,0,n/a,DHFW,ModPrio,ING,2.10.4
+AO58,Frequency-Watt Enabling Time Window,0,2147483647,1,0,Seconds,DHFW,WinTms,ING,2.3.2
+AO59,Frequency-Watt Enabling Ramp Time,0,2147483647,1,0,Seconds,DHFW,RmpTms,ING,2.3.2
+AO60,Frequency-Watt Reversion Timeout Period,0,2147483647,1,0,Seconds,DHFW,RvrtTms,ING,2.3.2
+AO61,Frequency-Watt Signal Meter ID,0,2147483647,1,0,n/a,DHFW,EcpRef 20,ORG,2.5.3
+AO62,Frequency-Watt High Starting Frequency,0,70000,0.001,0,Hz,DHFW,HzStr,ASG,2.5.3
+AO63,Frequency-Watt High Stopping Frequency,0,70000,0.001,0,Hz,DHFW,HzStop,ASG,2.5.3
+AO64,Frequency-Watt High Discharging / Generating Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DHFW,WGra,ASG,--
+AO65,Frequency-Watt High Charging Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DHFW,WChaGra,ASG,--
+AO66,Frequency-Watt Low Starting Frequency,-70000,0,0.001,0,Hz,DLFW,HzStr,ASG,2.5.3
+AO67,Frequency-Watt Low Stopping Frequency,-70000,0,0.001,0,Hz,DLFW,HzStop,ASG,2.5.3
+AO68,Frequency-Watt Low Discharging / Generating Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DLFW,WGra,ASG,2.5.3
+AO69,Frequency-Watt Low Charging Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DLFW,WChaGra,ASG,2.5.3
+AO70,Frequency-Watt Start Delay,0,2147483647,1,0,Millisec,DHFW,ActStrDlTmms,ING,2.5.3
+AO71,Frequency-Watt Stop Delay,0,2147483647,1,0,Millisec,DHFW,ActStopDlTmms,ING,2.5.3
+AO72,Frequency-Watt Time Constant Ramp Up Time,0,2147483647,1,0,Seconds,DHFW,OpnLoop,ING,2.3.4
+AO73,Frequency-Watt Time Constant Ramp Down Time,0,2147483647,1,0,Seconds,DHFW,OpnLoop,ING,2.3.4
+AO74,Frequency-Watt Discharge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DHFW,DschRpdRte,ASG,2.3.4
+AO75,Frequency-Watt Discharge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DHFW,ChaRpuRte,ASG,2.3.4
+AO76,Frequency-Watt Charge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DHFW,ChaRpdRte,ASG,2.3.4
+AO77,Frequency-Watt Charge Ramp Down Rate,0,500000,0.1,0,Percent per Second ,,ChaRpdRte,ASG,2.3.4
+AO78,Frequency-Watt High Return Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DHFW,RtnRmpRte,ASG,2.5.3
+AO79,Frequency-Watt Low Return Gradient,-2147483648,2147483647,0.001,0,% Watts per % Hz diff,DLFW,RtnRmpRte,ASG,2.5.3
+AO80,Frequency-Watt Minimum Usable SOC,0,1000,0.1,0.1,Percent,DHFW,SocUseMin,ING,2.6.5
+AO81,Frequency-Watt Maximum Usable SOC,0,1000,0.1,0.1,Percent,DHFW,SocUseMax,ING,2.6.5
+AO82,Active Power Limit Mode Priority,0,number of modes,1,0,n/a,DWMX,ModPrio,ING,2.10.4
+AO83,Active Power Limit Enabling Time Window,0,2147483647,1,0,Seconds,DWMX,WinTms,ING,2.3.2
+AO84,Active Power Limit Enabling Ramp Time,0,2147483647,1,0,Seconds,DWMX,RmpTms,ING,2.3.2
+AO85,Active Power Limit Reversion Timeout Period,0,2147483647,1,0,Seconds,DWMX,RvrtTms,ING,2.3.2
+AO86,Active Power Limit Signal Meter ID,0,2147483647,1,0,n/a,DWMX,EcpRef 21,ORG,2.6.1
+AO87,Active Power Limit Charge Setpoint. Maximum allowed Watts as a percentage of Maximum Active Power capability.,0,1000,0.1,0,Percent,DWMX,WLimPct,ASG,2.6.1
+AO88,Active Power Limit Generation Setpoint. Maximum allowed Watts as a percentage of Maximum Active Power capability.,0,1000,0.1,0,Percent,DWMN,WLimPct,ASG,2.6.1
+AO89,Charge/Discharge Mode Priority,0,number of modes,1,0,n/a,DWGC,ModPrio,ING,2.10.4
+AO90,Charge/Discharge Enabling Time Window,0,2147483647,1,0,Seconds,DWGC,WinTms,ING,2.3.2
+AO91,Charge/Discharge Enabling Ramp Time,0,2147483647,1,0,Seconds,DWGC,RmpTms,ING,2.3.2
+AO92,Charge/Discharge Reversion Timeout Period,0,2147483647,1,0,Seconds,DWGC,RvrtTms,ING,2.3.2
+AO93,Charge/Discharge Active Power Target. Percentage of maxmum active power.,-1000,1000,0.1,0,Percent,DWGC,GnWPctSpt,ASG,2.6.2
+AO94,Charge/Discharge Time Constant Ramp Up Time,0,2147483647,1,0,Seconds,DWGC,OpnLoop,ING,2.3.4
+AO95,Charge/Discharge Time Constant Ramp Down Time,0,2147483647,1,0,Seconds,DWGC,OpnLoop,ING,2.3.4
+AO96,Charge/Discharge Discharge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DWGC,DschRpuRte,ASG,2.3.4
+AO97,Charge/Discharge Discharge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DWGC,DschRpuRte,ASG,2.3.5
+AO98,Charge/Discharge Charge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DWGC,ChaRpuRte,ASG,2.3.4
+AO99,Charge/Discharge Charge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DWGC,ChaRpdRte,ASG,2.3.4
+AO100,Charge/Discharge Minimum Reserve for Storage. The minimum level to which the storage system may be discharged expressed as a percentage of the total usable storage.,-1000,500000,0.1,0,Percent per Second,DWGC,SocUseMinPct,ASG,2.6.2
+AO101,Charge/Discharge Maximum Rreserbe for Storage. The maximum level to which the storage system may be discharged expressed as a percentage of the total usable storage.,-1000,1000,0.1,0,Percent,DWGC,SocUseMaxPct,ASG,2.6.2
+AO102,Coordinated Charge/Discharge Mode Priority,0,number of modes,1,0,n/a,DTCD,ModPrio,ING,2.10.4
+AO103,Coordinated Charge/Discharge Enabling Time Window,0,2147483647,1,0,Seconds,DTCD,WinTms,ING,2.3.2
+AO104,Coordinated Charge/Discharge Enabling Ramp Time,0,2147483647,1,0,Seconds,DTCD,RmpTms,ING,2.3.2
+AO105,Coordinated Charge/Discharge Reversion Timeout Period,0,2147483647,1,0,Seconds,DTCD,RvrtTms,ING,2.3.2
+AO106,Coordinated Charge/Discharge Target State of Charge. Charge that the system is expected to achieve as a percentage of the usable capacity.,0,1000,0.1,0,Percent,DTCD,SocUseTgtPct,ASG,2.6.3
+AO107,Coordinated Charge/Discharge Target Date. Date by which the storage system must reach the target SOC. Expressed as number of days since January 1 1970 UTC.,0,2147483647,1,0,Days,DTCD,DateTgt,ING,2.6.3
+AO108,Coordinated Charge/Discharge Target Time. Time by which storage system must reach the target SOC. Expressed as number of milliseconds since the start ofo Target Date.,0,2147483647,1,0,Milli-seconds,DTCD,DateTgtTms,ING,2.6.3
+AO109,Coordinated Charge/Discharge Energy Request,0,2147483647,1,0,Watt- hours,DTCD,SocWReq,ING,2.6.3
+AO110,Coordinated Charge/Discharge Minimum Charging Duration,0,2147483647,1,0,Seconds,DTCD,ChaDurTms,ING,2.6.3
+AO111,Coordinated Charge/Discharge Date of Reference,0,2147483647,1,0,Days,DTCD,DateTgt,ING,2.6.3
+AO112,Coordinated Charge/Discharge Time of Reference,0,2147483647,1,0,Milli- seconds,DTCD,SocDateTms,ING,2.6.3
+AO113,Coordinated Charge/Discharge Duration at Maximum Charge Rate,0,2147483647,1,0,Seconds,DTCD,ChaDurMax,ING,2.6.3
+AO114,Coordinated Charge/Discharge Duration at maximum Discharge Rate,0,2147483647,1,0,Seconds,DTCD,DschDurMax,ING,2.6.3
+AO115,Active Power Response Mode #1 Priority,0,number of modes,1,0,n/a,DPKP,ModPrio,ING,2.10.4
+AO116,Active Power Response Mode #1 Enabling Time Window,0,2147483647,1,0,Seconds,DPKP,WinTms,ING,2.3.2
+AO117,Active Power Response Mode #1 Enabling Ramp Time,0,2147483647,1,0,Seconds,DPKP,RmpTms,ING,2.3.2
+AO118,Active Power Response Mode #1 Reversion Timeout Period,0,2147483647,1,0,Seconds,DPKP,RvrtTms,ING,2.3.2
+AO119,Active Power Response Mode #1 Signal Meter ID,0,2147483647,1,0,n/a,DPKP,EcpRef 22,ORG,2.6.4.1 2.6.4.2
+AO120,Active Power Response Mode #1 Power Threshold,-2147483648,2147483647,1,0,Watts,DPKP,PkPwrWLim,ASG,2.6.4.1 \2.6.4.2
+AO121,Active Power Response Mode #1 Ratio,0,1000,0.1,0,Percent,DPKP,PkPwrFolPct,ING,2.6.4.1 2.6.4.2
+AO122,Active Power Response Mode #1 Ramp Up Rate,0,500000,0.1,0,Percent per Second,DPKP,RpuRte,ASG,2.3.4
+AO123,Active Power Response Mode #1 Ramp Down Rate,0,500000,0.1,0,Percent per Second,DPKP,RpdRte,ASG,2.3.4
+AO124,Active Power Response Mode #2 Priority,0,number of modes,1,0,n/a,DGFL,ModPrio,ING,2.10.4
+AO125,Active Power Response Mode #2 Enabling Time Window,0,2147483647,1,0,Seconds,DGFL,WinTms,ING,2.3.2
+AO126,Active Power Response Mode #2 Enabling Ramp Time,0,2147483647,1,0,Seconds,DGFL,RmpTms,ING,2.3.2
+AO127,Active Power Response Mode #2 Reversion Timeout Period,0,2147483647,1,0,Seconds,DGFL,RvrtTms,ING,2.3.2
+AO128,Active Power Response Mode #2 Signal Meter ID,0,2147483647,1,0,n/a,DGFL,EcpRef 23,ORG,2.6.4.1 2.6.4.2
+AO129,Active Power Response Mode #2 Power Threshold,-2147483648,2147483647,1,0,Watts,DGFL,PkPwrWLim,ASG,2.6.4.1 2.6.4.2
+AO130,Active Power Response Mode #2 Ratio,0,1000,0.1,0,Percent,DGFL,PkPwrFolPct,ING,2.6.4.1 2.6.4.2
+AO131,Active Power Response Mode #2 Ramp Up Rate,0,500000,0.1,0,Percent per Second,DGFL,RpuRte,ASG,2.3.4
+AO132,Active Power Response Mode #2 Ramp Down Rate,0,500000,0.1,0,Percent per Second,DGFL,RpdRte,ASG,2.3.4
+AO133,Active Power Response Mode #3 Priority,0,number of modes,1,0,n/a,DLFL,ModPrio,ING,2.10.4
+AO134,Active Power Response Mode #3 Enabling Time Window,0,2147483647,1,0,Seconds,DLFL,WinTms,ING,2.3.2
+AO135,Active Power Response Mode #3 Enabling Ramp Time,0,2147483647,1,0,Seconds,DLFL,RmpTms,ING,2.3.2
+AO136,Active Power Response Mode #3 Reversion Timeout Period,0,2147483647,1,0,Seconds,DLFL,RvrtTms,ING,2.3.2
+AO137,Active Power Response Mode #3 Signal Meter ID,0,2147483647,1,0,n/a,DLFL,EcpRef 24,ORG,2.6.4.1 2.6.4.2
+AO138,Active Power Response Mode #3 Power Threshold,-2147483648,2147483647,1,0,Watts,DLFL,PkPwrWLim,ASG,2.6.4.1 2.6.4.2
+AO139,Active Power Response Mode #3 Ratio,0,1000,0.1,0,Percent,DLFL,PkPwrFolPct,ING,2.6.4.1 2.6.4.2
+AO140,Active Power Response Mode #3 Ramp Up Rate,0,500000,0.1,0,Percent per Second,DLFL,RpuRte,ASG,2.3.4
+AO141,Active Power Response Mode #3 Ramp Down Rate,0,500000,0.1,0,Percent per Second,DLFL,RpdRte,ASG,2.3.4
+AO142,AGC Mode Priority,0,number of modes,1,0,n/a,DAGC,ModPrio,ING,2.10.4
+AO143,AGC Enabling Time Window,0,2147483647,1,0,Seconds,DAGC,WinTms,ING,2.3.2
+AO144,AGC Enabling Ramp Time,0,2147483647,1,0,Seconds,DAGC,RmpTms,ING,2.3.3
+AO145,AGC Reversion Timeout Period,0,2147483647,1,0,Seconds,DAGC,RvrtTms,ING,2.3.4
+AO146,AGC Active Power Target,-2147483648,2147483647,1,0,Watts,DAGC,GnWSpt,ASG,2.6.5
+AO147,AGC Ramp Time Constant Up Time,0,2147483647,1,0,Seconds,DAGC,OpnLoop,ING,2.6.5
+AO148,AGC Ramp Time Constant Down Time,0,2147483647,1,0,Seconds,DAGC,OpnLoop,ING,2.6.5
+AO149,AGC Discharge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DAGC,DschRpuRte,ASG,2.3.4
+AO150,AGC Discharge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DAGC,DschRpdRte,ASG,2.3.4
+AO151,AGC Charge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DAGC,ChaRpuRte,ASG,2.3.4
+AO152,AGC Charge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DAGC,ChaRpdRte,ASG,2.3.4
+AO153,AGC Minimum Usable SOC,0,1000,0.1,0,Percent,DAGC,SocUseMinPct,ING,2.6.5
+AO154,AGC Maximum Usable SOC,0,1000,0.1,0,Percent,DAGC,SocUseMaxPct,ING,2.6.6
+AO155,Active Power Smoothing Mode Priority,0,number of modes,1,0,n/a,DWSM,ModPrio,ING,2.10.4
+AO156,Active Power Smoothing Enabling Time Window,0,2147483647,1,0,Seconds,DWSM,WinTms,ING,2.3.2
+AO157,Active Power Smoothing Enabling Ramp Time,0,2147483647,1,0,Seconds,DWSM,RmpTms,ING,2.3.2
+AO158,Active Power Smoothing Reversion Timeout Period,0,2147483647,1,0,Seconds,DWSM,RvrtTms,ING,2.3.2
+AO159,Active Power Smoothing Signal Meter ID,0,2147483647,1,0,n/a,DWSM,EcpRef 25,ORG,2.6.6
+AO160,Active Power Smoothing Gradient,-2147483648,2147483647,0.001,0,Watts per delta-watt,DWSM,WSmthGra,ASG,2.6.6
+AO161,Active Power Smoothing Lower Limit. Difference in Watts from the moving average of the reference power (MMXN1.Watt) above which no smoothing shall be applied.,-2147483648,0,1,0,Watts,DWSM,WSmthLoLim,ASG,2.6.6
+AO162,Active Power Smoothing Upper Limit. Difference in Watts from the moving average of the reference power (MMXN.Watt) below which no smoothing shall be applied.,0,2147483647,1,0,Watts,DWSM,WSmthHiLim,ASG,2.6.6
+AO163,Active Power Smoothing Filter Time (Seconds). Time in seconds used to calculate the moving average of the reference load or generation (MMXN1.Watt) being smoothed.,0,2147483647,1,0,Seconds,DWSM,FilTms,ING,2.6.6
+AO164,Active Power Smoothing Discharge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DWSM,RpuRte,ASG,2.3.4
+AO165,Active Power Smoothing Discharge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DWSM,RpdRte,ASG,2.3.4
+AO166,Active Power Smoothing Charge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DWSM,RpuChaRte,ASG,2.3.4
+AO167,Active Power Smoothing Charge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DWSM,RpdChaRte,ASG,2.3.4
+AO168,Volt-Watt Mode Priority,0,number of modes,1,0,n/a,DVWC,ModPrio,ING,2.10.4
+AO169,Volt-Watt Enabling Time Window,0,2147483647,1,0,Seconds,DVWC,WinTms,ING,2.3.2
+AO170,Volt-Watt Enabling Ramp Time,0,2147483647,1,0,Seconds,DVWC,RmpTms,ING,2.3.2
+AO171,Volt-Watt Reversion Timeout Period,0,2147483647,1,0,Seconds,DVWC,RvrtTms,ING,2.3.2
+AO172,Volt-Watt Signal Meter ID,0,2147483647,1,0,n/a,DVWC,EcpRef 26,ORG,2.6.7
+AO173,Volt-Watt Curve Index,0,2147483647,1,0,n/a,DVWC,VWCrv,CSG,2.6.7
+AO174,Volt-Watt Filter Time (Seconds),0,2147483647,1,0,Seconds,DVWC,FilTms,ING,2.6.7
+AO175,Volt-Watt Ramp Up Time Constant,0,2147483647,1,0,Seconds,DVWC,OpnLoop,ING,2.3.4
+AO176,Volt-Watt Ramp Down Time Constant,0,2147483647,1,0,Seconds,DVWC,OpnLoop,ING,2.3.4
+AO177,Volt-Watt Discharging Ramp Up Rate,0,500000,0.1,0,Percent per Second,DVWC,DschRpuRte,ASG,2.3.4
+AO178,Volt-Watt Discharging Ramp Down Rate,0,500000,0.1,0,Percent per Second,DVWC,DschRpdRte,ASG,2.3.4
+AO179,Volt-Watt Charging Ramp Up Rate,0,500000,0.1,0,Percent per Second,DVWC,ChaRpuRte,ASG,2.3.4
+AO180,Volt-Watt Charging Ramp Down Rate,0,500000,0.1,0,Percent per Second,DVWC,ChaRpdRte,ASG,2.3.4
+AO181,Frequency-Watt Curve Mode Priority,0,number of modes,1,0,n/a,DHFW,ModPrio,ING,2.10.4
+AO182,Frequency-Watt Curve Enabling Time Window,0,2147483647,1,0,Seconds,DHFW,WinTms,ING,2.3.2
+AO183,Frequency-Watt Curve Enabling Ramp Time,0,2147483647,1,0,Seconds,DHFW,RmpTms,ING,2.3.2
+AO184,Frequency-Watt Curve Reversion Timeout Period,0,2147483647,1,0,Seconds,DHFW,RvrtTms,ING,2.3.2
+AO185,Frequency-Watt Curve Signal Meter ID,0,2147483647,1,0,n/a,DHFW,EcpRef 27,ORG,2.6.8
+AO186,Frequency-Watt Curve - Curve Index,0,2147483647,1,0,n/a,DHFW,HzWCrv,ASG,2.6.8
+AO187,Frequency-Watt Curve - High Frequency Hysteresis Curve Index,0,2147483647,1,0,n/a,DHFW,HysCrv,ASG,2.6.8
+AO188,Frequency-Watt Curve - Low Frequency Hysteresis Curve Index,0,2147483647,1,0,n/a,DLFW,HysCrv,ASG,2.6.8
+AO189,Frequency-Watt Curve Start Delay,0,2147483647,1,0,Millisec,DHFW,ActStrDlTmms,ING,2.5.3
+AO190,Frequency-Watt Curve Stop Delay,0,2147483647,1,0,Millisec,DHFW,ActStopDlTmms,ING,2.5.3
+AO191,Frequency-Watt Curve Ramp Up Time Constant,0,2147483647,1,0,Seconds,DHFW,OpnLoopMax,ING,2.3.4
+AO192,Frequency-Watt Curve Ramp Down Time Constant,0,2147483647,1,0,Seconds,DHFW,OpnLoopMax,ING,2.3.4
+AO193,Frequency-Watt Curve Discharge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DHFW,RpuRte,ING,2.3.4
+AO194,Frequency-Watt Curve Discharge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DHFW,RpdRte,ING,2.3.4
+AO195,Frequency-Watt Curve Charge Ramp Up Rate,0,500000,0.1,0,Percent per Second,DHFW,RpuChaRte,ING,2.3.4
+AO196,Frequency-Watt Curve Charge Ramp Down Rate,0,500000,0.1,0,Percent per Second,DHFW,RpdChaRte,ING,2.3.4
+AO197,Frequency-Watt Curve Minimum Usable SOC,0,1000,0.1,0,Percent,DHFW,SocUseMinPct,ING,2.6.5
+AO198,Frequency-Watt Curve Maximum Usable SOC,0,1000,0.1,0,Percent,DHFW,SocUseMaxPct,ING,2.6.5
+AO199,Constant VArs Mode Priority,0,number of modes,1,0,n/a,DVAR,ModPrio,ING,2.10.4
+AO200,Constant VArs Enabling Time Window,0,2147483647,1,0,Seconds,DVAR,WinTms,ING,2.3.2
+AO201,Constant VArs Enabling Ramp Time,0,2147483647,1,0,Seconds,DVAR,RmpTms,ING,2.3.
+AO202,Constant VArs Reversion Timeout Period,0,2147483647,1,0,Seconds,DVAR,RvrtTms,ING,2.3.2
+AO203,Constant VArs Reactive Power Target,-1000,1000,0.1,0,Percent,DVAR,VArTgtPct,ASG,2.7.1
+AO204,Constant VArs Ramp Up Time Constant,0,2147483647,1,0,Seconds,DVAR,OpnLoopMax,ING,2.3.4
+AO205,Constant VArs Ramp Down Time Constant,0,2147483647,1,0,Seconds,DVAR,OpnLoopMax,ING,2.3.4
+AO206,Fixed Power Factor Mode Priority,0,number of modes,1,0,n/a,DFPF,ModPrio,ING,2.10.4
+AO207,Fixed Power Factor Enabling Time Window,0,2147483647,1,0,Seconds,DFPF,WinTms,ING,2.3.2
+AO208,Fixed Power Factor Enabling Ramp Time,0,2147483647,1,0,Seconds,DFPF,RmpTms,ING,2.3.3
+AO209,Fixed Power Factor Reversion Timeout Period,0,2147483647,1,0,Seconds,DFPF,RvrtTms,ING,2.3.2
+AO210,Fixed Power Factor Setpoint : Generation / Discharging,0,100,0.01,0,None,DFPF,PFGnTgt,ASG,2.7.2
+AO211,Fixed Power Factor Setpoint - Charging,0,100,0.01,0,None,DFPF,PFLodTgt,ASG,2.7.2
+AO212,Volt-VAR Control Mode Priority,0,number of modes,1,0,n/a,DVVR,ModPrio,ING,2.10.4
+AO213,Volt-VAR Control Enabling Time Window,0,2147483647,1,0,Seconds,DVVR,WinTms,ING,2.3.2
+AO214,Volt-VAR Control Enabling Ramp Time,0,2147483647,1,0,Seconds,DVVR,RmpTms,ING,2.3.2
+AO215,Volt-VAR Control Reversion Timeout Period,0,2147483647,1,0,Seconds,DVVR,RvrtTms,ING,2.3.2
+AO216,Volt-VAR Control Signal Meter ID,0,2147483647,1,0,n/a,DVVR,EcpRef 28,ORG,2.7.3
+AO217,Volt-VAR Curve Index,0,2147483647,1,0,n/a,DVVR,VVArCrv,CSG,2.7.3
+AO218,Volt-VAr Ramp Up Time Constanr,0,2147483647,1,0,Seconds,DVVR,OpnLoopMax,ING,2.3.4
+AO219,Volt-VAr Ramp Down Time Constant,0,2147483647,1,0,Seconds,DVVR,OpnLoopMax,ING,2.3.4
+AO220,Volt-VAr Autonomous Voltage Reference Adjustment Time Constant,0,2147483647,1,0,Seconds,DVVR,VRefTmms,ING,2.3.4
+AO221,Watt-VAr Mode Priority,0,number of modes,1,0,n/a,DWVR,ModPrio,ING,2.10.4
+AO222,Watt-VAr Enabling Time Window,0,2147483647,1,0,Seconds,DWVR,WinTms,ING,2.3.2
+AO223,Watt-VAr Enabling Ramp Time,0,2147483647,1,0,Seconds,DWVR,RmpTms,ING,2.3.2
+AO224,Watt-VAr Reversion Timeout Period,0,2147483647,1,0,Seconds,DWVR,RvrtTms,ING,2.3.2
+AO225,Watt-VAr Signal Meter ID,0,2147483647,1,0,n/a,DWVR,EcpRef 29,ORG,2.7.4
+AO226,Watt-VAr Curve Index,0,2147483647,1,0,n/a,DWVR,WVArCrv,CSG,2.7.4
+AO227,Watt-VAr Ramp Up Time Constant,0,2147483647,1,0,Seconds,DWVR,OpnLoopMax,ING,2.3.4
+AO228,Watt-VAr Ramp Down Time Constant,0,2147483647,1,0,Seconds,DWVR,OpnLoopMax,ING,2.3.4
+AO229,Power Factor Correction Mode Priority,0,number of modes,1,0,n/a,DPFC,ModPrio,ING,2.10.4
+AO230,Power Factor Correction Enabling Time Window,0,2147483647,1,0,Seconds,DPFC,WinTms,ING,2.3.2
+AO231,Power Factor Correction Enabling Ramp Time,0,2147483647,1,0,Seconds,DPFC,RmpRte,ASG,2.3.2
+AO232,Power Factor Correction Reversion Timeout Period,0,2147483647,1,0,Seconds,DPFC,RvrtTms,ING,2.3.2
+AO233,Power Factor Correction Signal Meter ID,0,2147483647,1,0,n/a,DPFC,EcpRef 30,ORG,2.7.5
+AO234,Power Factor Correction Average PF Target,-100,100,0.01,0,None,DPFC,PFTrg,ASG,2.7.5
+AO235,Power Factor Correction Lower PF Limit,-100,100,0.01,0,None,DPFC,PFCorRef.rangeC,Int,2.7.5
+AO236,Power Factor Correction Upper PF Limit,-100,100,0.01,0,None,DPFC,PFCorRef.rangeC,Int,2.7.5
+AO237,Pricing Mode Priority,0,number of modes,1,0,None,DPRG,ModPrio,ING,2.10.4
+AO238,Pricing Mode Enabling Time Window,0,2147483647,1,0,Seconds,DPRG,WinTms,ING,2.3.2
+AO239,Pricing Mode Enabling Ramp Time,0,2147483647,1,0,Seconds,DPRG,RmpTms,ING,2.3.3
+AO240,Pricing Mode Reversion Timeout period,0,2147483647,1,0,Seconds,DPRG,RvrtTms,ING,2.3.2
+AO241,Pricing Mode Setpoint. Hundredths of local currency per Kilowatt-Hr.,-2147483648,2147483647,0.1,0,100ths of local currency,DPRG,PrcRef,MV,2.8
+AO242,Pricing Mode Time Constant Ramp Up Time,0,2147483647,1,0,Seconds,DPRG,OpnLoopMax,ASG,2.3.4
+AO243,Pricing Mode Time Constant Ramp Down Time,0,2147483647,1,0,Seconds,DPRG,OpnLoopMax,ASG,2.3.4
+AO244,Curve Edit Selector.  Writing to this point selects which of the curves can currently be viewed and changed,1,2147483647,1,0,n/a,DGSM,InCrv,ORG,2.3.3
+AO245,Curve Mode Type. Enumeration: <0> Curve disabled <1> Not applicable / Unknown <2> Volt-Var modes <3> Frequency-Watt mode <4> Watt-VAr mode <5> Voltage-Watt modes <6> Remain Connected <7> Temperature mode <8> Pricing signal mode High Voltage ride-through curves <9> HVRT Must Trip <10> HVRT Momentary Cessation Low Voltage ride-through curves <11> LVRT Must Trip <12> LVRT Momentary Cessation High Frequency ride-through curves  <13> HFRT Must Trip <14> HFRT Momentary Cessation Low Frequency ride-through curves <15> LFRT Must Trip <16> LFRT Mandatory Operation,0,20,1,0,None(list),DGSM,ModTyp,ENG,2.3.3
+AO246,Curve Number of Points Independent (X-Value) Units for Curve. Enumeration: <0> Curve disabled <1> Not applicable / Unknown <4> Time <29> Voltage <33> Frequency <38> Watts <23> Celsius Temperature <100 Price in hundredths of local currency <129> Percent Voltage <133> Percent Frequency <138> Percent Watts <233> Frequency Deviation <234+> Other,0,100,1,0,n/a,FMAR,PairArr.NumPts,CSG,2.3.3
+AO247,Independent (X-Value) Units for (list) Curve.  Enumeration:,0,255,1,0,None(list),FMAR,IndpUnits,ENG,2.3.3
+AO248,Dependent (Y-Value) Units for Curve. Enumeration: <0> Curve disabled <1> Not applicable / unknown <2> VArs as percent of max VArs (VARMax) <3> VArs as percent of max available VArs (VArAval) <4> Vars as percent of max Watts (Wmax) – not used <5> Watts as percent of max Watts (Wmax) <6> Watts as percent of frozen active power (DeptSnptRef) <7> Power Factor in EEI notation <8> Volts as a percent of the nominal voltage (VRef) <9> Frequency as a percent of the nominal grid frequency (ECPNomHz),0,255,1,0,None(list),FMAR,DepRef,ENG,2.3.3
+AO249,Curve Point 1 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[1].xV,CSG,2.3.3
+AO250,Curve Point 1 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[1].yV,CSG,2.3.3
+AO251,Curve Point 2 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[2].xV,CSG,2.3.3
+AO252,Curve Point 2 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[2].yV,CSG,2.3.3
+AO253,Curve Point 3 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[3].xV,CSG,2.3.3
+AO254,Curve Point 3 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[3].yV,CSG,2.3.3
+AO255,Curve Point 4 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[4].xV,CSG,2.3.3
+AO256,Curve Point 4 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[4].yV,CSG,2.3.3
+AO257,Curve Point 5 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[5].xV,CSG,2.3.3
+AO258,Curve Point 5 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[5].yV,CSG,2.3.3
+AO259,Curve Point 6 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[6].xV,CSG,2.3.3
+AO260,Curve Point 6 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[6].yV,CSG,2.3.3
+AO261,Curve Point 7 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[7].xV,CSG,2.3.3
+AO262,Curve Point 7 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[7].yV,CSG,2.3.3
+AO263,Curve Point 8 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[8].xV,CSG,2.3.3
+AO264,Curve Point 8 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[8].yV,CSG,2.3.3
+AO265,Curve Point 9 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[9].xV,CSG,2.3.3
+AO266,Curve Point 9 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[9].yV,CSG,2.3.3
+AO267,Curve Point 10 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[10].xV,CSG,2.3.3
+AO268,Curve Point 10 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[10].yV,CSG,2.3.3
+AO269,Curve Point 11 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[11].xV,CSG,2.3.3
+AO270,Curve Point 11 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[11].yV,CSG,2.3.3
+AO271,Curve Point 12 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[12].xV,CSG,2.3.3
+AO272,Curve Point 12 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[12].yV,CSG,2.3.3
+AO273,Curve Point 13 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[13].xV,CSG,2.3.3
+AO274,Curve Point 13 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[13].yV,CSG,2.3.3
+AO275,Curve Point 14 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[14].xV,CSG,2.3.3
+AO276,Curve Point 14 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[14].yV,CSG,2.3.3
+AO277,Curve Point 15 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[15].xV,CSG,2.3.3
+AO278,Curve Point 15 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[15].yV,CSG,2.3.3
+AO279,Curve Point 16 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[16].xV,CSG,2.3.3
+AO280,Curve Point 16 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[16].yV,CSG,2.3.3
+AO281,Curve Point 17 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[17].xV,CSG,2.3.3
+AO282,Curve Point 17 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[17].yV,CSG,2.3.3
+AO283,Curve Point 18 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[18].xV,CSG,2.3.3
+AO284,Curve Point 18 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[18].yV,CSG,2.3.3
+AO285,Curve Point 19 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[19].xV,CSG,2.3.3
+AO286,Curve Point 19 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[19].yV,CSG,2.3.3
+AO287,Curve Point 20 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[20].xV,CSG,2.3.3
+AO288,Curve Point 20 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[20].yV,CSG,2.3.3
+AO289,Curve Point 21 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[21].xV,CSG,2.3.3
+AO290,Curve Point 21 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[21].yV,CSG,2.3.3
+AO291,Curve Point 22 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[22].xV,CSG,2.3.3
+AO292,Curve Point 22 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[22].yV,CSG,2.3.3
+AO293,Curve Point 23 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[23].xV,CSG,2.3.3
+AO294,Curve Point 23 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[23].yV,CSG,2.3.3
+AO295,Curve Point 24 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[24].xV,CSG,2.3.3
+AO296,Curve Point 24 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[24].yV,CSG,2.3.3
+AO297,Curve Point 25 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[25].xV,CSG,2.3.3
+AO298,Curve Point 25 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[25].yV,CSG,2.3.3
+AO299,Curve Point 26 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[26].xV,CSG,2.3.3
+AO300,Curve Point 26 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[26].yV,CSG,2.3.3
+AO301,Curve Point 27 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[27].xV,CSG,2.3.3
+AO302,Curve Point 27 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[27].yV,CSG,2.3.3
+AO303,Curve Point 28 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[28].xV,CSG,2.3.3
+AO304,Curve Point 28 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[28].yV,CSG,2.3.3
+AO305,Curve Point 29 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[29].xV,CSG,2.3.3
+AO306,Curve Point 29 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[29].yV,CSG,2.3.3
+AO307,Curve Point 30 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[30].xV,CSG,2.3.3
+AO308,Curve Point 30 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[30].yV,CSG,2.3.3
+AO309,Curve Point 31 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[31].xV,CSG,2.3.3
+AO310,Curve Point 31 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[31].yV,CSG,2.3.3
+AO311,Curve Point 32 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[32].xV,CSG,2.3.3
+AO312,Curve Point 32 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[32].yV,CSG,2.3.3
+AO313,Curve Point 33 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[33].xV,CSG,2.3.3
+AO314,Curve Point 33 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[33].yV,CSG,2.3.3
+AO315,Curve Point 34 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[34].xV,CSG,2.3.3
+AO316,Curve Point 34 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[34].yV,CSG,2.3.3
+AO317,Curve Point 35 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[35].xV,CSG,2.3.3
+AO318,Curve Point 35 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[35].yV,CSG,2.3.3
+AO319,Curve Point 36 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[36].xV,CSG,2.3.3
+AO320,Curve Point 36 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[36].yV,CSG,2.3.3
+AO321,Curve Point 37 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[37].xV,CSG,2.3.3
+AO322,Curve Point 37 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[37].yV,CSG,2.3.3
+AO323,Curve Point 38 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[38].xV,CSG,2.3.3
+AO324,Curve Point 38 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[38].yV,CSG,2.3.3
+AO325,Curve Point 39 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[39].xV,CSG,2.3.3
+AO326,Curve Point 39 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[39].yV,CSG,2.3.3
+AO327,Curve Point 40 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[40].xV,CSG,2.3.3
+AO328,Curve Point 40 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[40].yV,CSG,2.3.3
+AO329,Curve Point 41 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[41].xV,CSG,2.3.3
+AO330,Curve Point 41 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[41].yV,CSG,2.3.3
+AO331,Curve Point 42 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[42].xV,CSG,2.3.3
+AO332,Curve Point 42 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[42].yV,CSG,2.3.3
+AO333,Curve Point 43 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[43].xV,CSG,2.3.3
+AO334,Curve Point 43 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[43].yV,CSG,2.3.3
+AO335,Curve Point 44 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[44].xV,CSG,2.3.3
+AO336,Curve Point 44 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[44].yV,CSG,2.3.3
+AO337,Curve Point 45 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[45].xV,CSG,2.3.3
+AO338,Curve Point 45 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[45].yV,CSG,2.3.3
+AO339,Curve Point 46 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[46].xV,CSG,2.3.3
+AO340,Curve Point 46 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[46].yV,CSG,2.3.3
+AO341,Curve Point 47 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[47].xV,CSG,2.3.3
+AO342,Curve Point 47 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[47].yV,CSG,2.3.3
+AO343,Curve Point 48 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[48].xV,CSG,2.3.3
+AO344,Curve Point 48 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[48].yV,CSG,2.3.3
+AO345,Curve Point 49 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[49].xV,CSG,2.3.3
+AO346,Curve Point 49 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[49].yV,CSG,2.3.3
+AO347,Curve Point 50 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[50].xV,CSG,2.3.3
+AO348,Curve Point 50 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[50].yV,CSG,2.3.3
+AO349,Curve Point 51 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[51].xV,CSG,2.3.3
+AO350,Curve Point 51 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[51].yV,CSG,2.3.3
+AO351,Curve Point 52 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[52].xV,CSG,2.3.3
+AO352,Curve Point 52 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[52].yV,CSG,2.3.3
+AO353,Curve Point 53 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[53].xV,CSG,2.3.3
+AO354,Curve Point 53 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[53].yV,CSG,2.3.3
+AO355,Curve Point 54 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[54].xV,CSG,2.3.3
+AO356,Curve Point 54 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[54].yV,CSG,2.3.3
+AO357,Curve Point 55 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[55].xV,CSG,2.3.3
+AO358,Curve Point 55 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[55].yV,CSG,2.3.3
+AO359,Curve Point 56 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[56].xV,CSG,2.3.3
+AO360,Curve Point 56 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[56].yV,CSG,2.3.3
+AO361,Curve Point 57 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[57].xV,CSG,2.3.3
+AO362,Curve Point 57 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[57].yV,CSG,2.3.3
+AO363,Curve Point 58 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[58].xV,CSG,2.3.3
+AO364,Curve Point 58 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[58].yV,CSG,2.3.3
+AO365,Curve Point 59 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[59].xV,CSG,2.3.3
+AO366,Curve Point 59 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[59].yV,CSG,2.3.3
+AO367,Curve Point 60 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[60].xV,CSG,2.3.3
+AO368,Curve Point 60 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[60].yV,CSG,2.3.3
+AO369,Curve Point 61 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[61].xV,CSG,2.3.3
+AO370,Curve Point 61 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[61].yV,CSG,2.3.3
+AO371,Curve Point 62 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[62].xV,CSG,2.3.3
+AO372,Curve Point 62 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[62].yV,CSG,2.3.3
+AO373,Curve Point 63 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[63].xV,CSG,2.3.3
+AO374,Curve Point 63 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[63].yV,CSG,2.3.3
+AO375,Curve Point 64 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[64].xV,CSG,2.3.3
+AO376,Curve Point 64 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[64].yV,CSG,2.3.3
+AO377,Curve Point 65 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[65].xV,CSG,2.3.3
+AO378,Curve Point 65 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[65].yV,CSG,2.3.3
+AO379,Curve Point 66 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[66].xV,CSG,2.3.3
+AO380,Curve Point 66 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[66].yV,CSG,2.3.3
+AO381,Curve Point 67 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[67].xV,CSG,2.3.3
+AO382,Curve Point 67 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[67].yV,CSG,2.3.3
+AO383,Curve Point 68 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[68].xV,CSG,2.3.3
+AO384,Curve Point 68 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[68].yV,CSG,2.3.3
+AO385,Curve Point 69 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[69].xV,CSG,2.3.3
+AO386,Curve Point 69 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[69].yV,CSG,2.3.3
+AO387,Curve Point 70 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[70].xV,CSG,2.3.3
+AO388,Curve Point 70 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[70].yV,CSG,2.3.3
+AO389,Curve Point 71 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[71].xV,CSG,2.3.3
+AO390,Curve Point 71 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[71].yV,CSG,2.3.3
+AO391,Curve Point 72 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[72].xV,CSG,2.3.3
+AO392,Curve Point 72 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[72].yV,CSG,2.3.3
+AO393,Curve Point 73 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[73].xV,CSG,2.3.3
+AO394,Curve Point 73 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[73].yV,CSG,2.3.3
+AO395,Curve Point 74 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[74].xV,CSG,2.3.3
+AO396,Curve Point 74 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[74].yV,CSG,2.3.3
+AO397,Curve Point 75 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[75].xV,CSG,2.3.3
+AO398,Curve Point 75 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[75].yV,CSG,2.3.3
+AO399,Curve Point 76 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[76].xV,CSG,2.3.3
+AO400,Curve Point 76 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[76].yV,CSG,2.3.3
+AO401,Curve Point 77 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[77].xV,CSG,2.3.3
+AO402,Curve Point 77 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[77].yV,CSG,2.3.3
+AO403,Curve Point 78 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[78].xV,CSG,2.3.3
+AO404,Curve Point 78 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[78].yV,CSG,2.3.3
+AO405,Curve Point 79 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[79].xV,CSG,2.3.3
+AO406,Curve Point 79 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[79].yV,CSG,2.3.3
+AO407,Curve Point 80 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[80].xV,CSG,2.3.3
+AO408,Curve Point 80 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[80].yV,CSG,2.3.3
+AO409,Curve Point 81 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[81].xV,CSG,2.3.3
+AO410,Curve Point 81 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[81].yV,CSG,2.3.3
+AO411,Curve Point 82 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[82].xV,CSG,2.3.3
+AO412,Curve Point 82 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[82].yV,CSG,2.3.3
+AO413,Curve Point 83 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[83].xV,CSG,2.3.3
+AO414,Curve Point 83 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[83].yV,CSG,2.3.3
+AO415,Curve Point 84 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[84].xV,CSG,2.3.3
+AO416,Curve Point 84 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[84].yV,CSG,2.3.3
+AO417,Curve Point 85 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[85].xV,CSG,2.3.3
+AO418,Curve Point 85 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[85].yV,CSG,2.3.3
+AO419,Curve Point 86 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[86].xV,CSG,2.3.3
+AO420,Curve Point 86 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[86].yV,CSG,2.3.3
+AO421,Curve Point 87 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[87].xV,CSG,2.3.3
+AO422,Curve Point 87 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[87].yV,CSG,2.3.3
+AO423,Curve Point 88 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[88].xV,CSG,2.3.3
+AO424,Curve Point 88 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[88].yV,CSG,2.3.3
+AO425,Curve Point 89 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[89].xV,CSG,2.3.3
+AO426,Curve Point 89 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[89].yV,CSG,2.3.3
+AO427,Curve Point 90 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[90].xV,CSG,2.3.3
+AO428,Curve Point 90 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[90].yV,CSG,2.3.3
+AO429,Curve Point 91 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[91].xV,CSG,2.3.3
+AO430,Curve Point 91 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[91].yV,CSG,2.3.3
+AO431,Curve Point 92 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[92].xV,CSG,2.3.3
+AO432,Curve Point 92 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[92].yV,CSG,2.3.3
+AO433,Curve Point 93 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[93].xV,CSG,2.3.3
+AO434,Curve Point 93 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[93].yV,CSG,2.3.3
+AO435,Curve Point 94 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[94].xV,CSG,2.3.3
+AO436,Curve Point 94 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[94].yV,CSG,2.3.3
+AO437,Curve Point 95 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[95].xV,CSG,2.3.3
+AO438,Curve Point 95 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[95].yV,CSG,2.3.3
+AO439,Curve Point 96 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[96].xV,CSG,2.3.3
+AO440,Curve Point 96 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[96].yV,CSG,2.3.3
+AO441,Curve Point 97 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[97].xV,CSG,2.3.3
+AO442,Curve Point 97 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[97].yV,CSG,2.3.3
+AO443,Curve Point 98 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[98].xV,CSG,2.3.3
+AO444,Curve Point 98 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[98].yV,CSG,2.3.3
+AO445,Curve Point 99 X-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[99].xV,CSG,2.3.3
+AO446,Curve Point 99 Y-Value,see scaling table depending on Mode Type,--,--,0,Varies,FMAR,PairArr.CrvPts[99].yV,CSG,2.3.3
+AO447,Curve Point 100 X-Value,see scaling table depending on Mode Type,,--,0,Varies,FMAR,PairArr.CrvPts[100].xVal,CSG,2.3.3
+AO448,Curve Point 100 Y-Value,see scaling table depending on Mode Type,,--,0,Varies,FMAR,PairArr.CrvPts[100].yVal,CSG,2.3.3
+AO449,System Meter Active Power : High Threshold,0,2147483647,1,0,Watts,MMXU,TotW.rangeC.hLim,MV,2.4.3
+AO450,System Meter Active Power : Low Threshold,0,2147483647,1,0,Watts,MMXU,TotW.rangeC.lLim,MV,2.4.3
+AO451,System Meter Reactive Power : High Threshold,0,2147483647,1,0,VARs,MMXU,TotVAr.rangeC.hLim,MV,2.4.3
+AO452,System Meter at Reactive Power : Low Threshold,0,2147483647,1,0,VARs,MMXU,TotVAr.rangeC.lLim,MV,2.4.3
+AO453,System Meter at Power Factor : High Threshold,-100,100,0.01,0,None,MMXU,TotPF.rangeC.hLim,MV,2.4.3
+AO454,System Meter at Power Factor : Low Threshold,-100,100,0.01,0,None,MMXU,TotPF.rangeC.lLim,MV,2.4.3
+AO455,System Meter Phase A Volts : High Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsA.rangeC.h Lim,WYE,2.4.3
+AO456,System Meter Phase A Volts : Low Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsA.rangeC.lLi m,WYE,2.4.3
+AO457,System Meter Phase B Volts : High Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsB.rangeC.h Lim,WYE,2.4.3
+AO458,System Meter Phase B Volts : Low Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsB.rangeC.lLi m,WYE,2.4.3
+AO459,System Meter Phase C Volts : High Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsC.rangeC.h Lim,WYE,2.4.3
+AO460,System Meter Phase C Volts : Low Threshold,0,2147483647,0.1,0,Volts,MMXU,PhV.phsC.rangeC.lL im,WYE,2.4.3
